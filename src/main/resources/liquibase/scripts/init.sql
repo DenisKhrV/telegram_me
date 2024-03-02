@@ -8,5 +8,6 @@ CREATE TABLE users
     telegram_nick TEXT,
     first_name    TEXT,
     last_name     TEXT,
-    phone_number  TEXT
+    phone_number  TEXT,
+    user_type     SMALLINT NOT NULL
 );

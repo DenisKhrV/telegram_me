@@ -40,9 +40,9 @@ public class TelegramBotUpdateListener implements UpdatesListener {
 //                    return;
 //                }
 //
-//                if (userRequestsService.checkVolunteer(update)) {
-//                    return;
-//                }
+                if (userRequestsService.checkVolunteer(update)) {
+                    return;
+                }
 //
 //                if (userRequestsService.checkAdopter(update)) {
 //                    return;
@@ -56,12 +56,12 @@ public class TelegramBotUpdateListener implements UpdatesListener {
 //                    return;
 //                }
 //
-//                if (update.message() == null) {
-//                    userRequestsService.createButtonClick(update);
-//
-//                } else {
+                if (update.message() == null) {
+                    userRequestsService.createButton(update);
+
+                } else {
                     userRequestsService.sendMessageStart(update);
-//                }
+                }
             });
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
